@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue Shopping Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        html {
+            overflow:hidden;
+        }
+        canvas {
+            position:absolute;
+            top:0px;
+            left:0px;
+            -webkit-filter: blur(20px);
+        }
+
+        #can-wrapper {
+            background:#666;
+            position:absolute;
+            top:-3%;
+            left:-3%;
+            height:106%;
+            width:106%;
+        }
+    </style>
+    <body>
+        <div id="can-wrapper">
+            <canvas></canvas>
+        </div>
+
+        <section id="shopping-cart">
+
+            <div v-component="product" v-repeat="products" v-ref="product"></div>
+
+        </section>
+
+        <script src="dist/build.js"></script>
+    </body>
+</html>
